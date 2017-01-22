@@ -1,5 +1,12 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
+}
 body{
   margin: 0px;
+  height: 100%;
 }
 
 .navbar{
@@ -13,10 +20,12 @@ body{
   list-style-type: None;
   margin: 0px;
   float: right;
+  font-size: 0;
 }
 
 .navbar .navbar-list .navbar-item{
   display: inline-block;
+  font-size: 16px;
 }
 
 .navbar .navbar-list .navbar-item .navbar-link{
@@ -26,11 +35,150 @@ body{
   color: rgba(0, 0, 0, 0.92);
 }
 
+.navbar .navbar-list .navbar-item.active .navbar-link{
+  color:red;
+  background-color: blue;
+}
+
 .navbar .navbar-list .navbar-item .navbar-link:hover{
   color:red;
   background-color: blue;
 }
 
+.header .title{
+  position: absolute;
+  left: 0;
+  top: 65%;
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-size: 80px;
+  animation: titleAnimation 2s backwards;
+  animation-delay: 1s;
+
+}
+
+@keyframes titleAnimation {
+  0%{
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  50%{
+    opacity: 0.5;
+    transform: rotateY(-180deg);
+  }
+  100%{
+    opacity: 1;
+  }
+
+}
+
+.header .title-img{
+  width: 100%;
+  background-image: url("../images/header-image.jpg");
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.section-title{
+  text-align: center;;
+}
+
+.about-me .me-photo{
+  max-width: 50%;
+  float: left;
+}
+
+.about-me .me-info{
+  max-width: 50%;
+  float: right;
+}
+.study-center-photo{
+  height:100px;
+  max-width: 100%;
+}
+
+.section-content{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.section-content-reverse{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: green;
+  color: white;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+.contact-title{
+  text-align: center;
+}
+
+.container {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.form{
+  padding: 0 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form .form-row{
+  padding: 10px;
+}
+
+input{
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type=button], inpurt[type=submit], input[type=reset], button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 0px;
+}
+
+.loader{
+  border:8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+  0%{ transform:  rotate(0deg); }
+  100%{ transform: rotate(360deg);}
+}
+.experience .image{
+  float: right;
+  height: 120px;
+  max-width: 100%;
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
+
+
+.footer{
+  width: 100%;
+  background-color: rgba(0,0,0,0.92);
+  height: 50px;
+  color: #F7F7F7;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
 .clearfix:after {
     content: " "; /* Older browser do not support empty content */
     visibility: hidden;

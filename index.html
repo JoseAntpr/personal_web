@@ -4,15 +4,19 @@
   <title>José Antonio Palacios</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="style/style.css"/>
+  <link rel="stylesheet" type="text/css" href="style/grid.css"/>
+  <script src="js/jquery-3.1.1.js"></script>
 </head>
 <body>
-  <header>
-    <h1>José Antonio Palacios</h1>
+  <header class="header">
+    <h1 class="title">José Antonio Palacios</h1>
+    <!--<img src="images/header-image.jpg" class="title-img">-->
+    <div class="title-img">
   </header>
   <nav class="navbar">
     <ul class="navbar-list">
-      <li class="navbar-item">
-        <a href="#" class="navbar-link">Inicio</a>
+      <li class="navbar-item active">
+        <a href="#" class="navbar-link ">Inicio</a>
       </li>
       <li class="navbar-item">
         <a href="#who" class="navbar-link">Quien soy</a>
@@ -21,35 +25,166 @@
         <a href="#study" class="navbar-link">Estudios</a>
       </li>
       <li class="navbar-item">
-        <a href="#experiencie" class="navbar-link">Experiencia</a>
+        <a href="#experience" class="navbar-link">Experiencia</a>
       </li>
       <li class="navbar-item">
-        <a href="#about-me" class="navbar-link">Sobre mi</a>
+        <a href="#hobbies" class="navbar-link">Sobre mi</a>
       </li class="navbar-item">
       <li class="navbar-item">
-        <a href="#contacto" class="navbar-link">Contacto</a>
+        <a href="#contact" class="navbar-link">Contacto</a>
       </li>
     </ul>
   </nav>
-  <main>
-    <section id="who">
+  <main class="container">
+    <section id="who" class="about-me clearfix section-content">
+      <div class="me-photo">
+        <img src="images/jose_palacios.jpg" alt="Imagen de mi perfil">
+      </div>
+      <div class="me-info">
+        <h2>Quien soy</h2>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.
+        </span>
+      </div>
 
     </section>
-    <section id="study">
-
+    <section id="study" class="study section-content-reverse">
+      <div class="row section-content container">
+        <h2 class="section-title">Estudios</h2>
+        <div class="col-4">
+          <article>
+            <header>
+              <h3>Startup School by Tetuan Valley</h3>
+            </header>
+            <img src="images/tetuan-valley-logo.png" alt="Logo de Tetuan Valley" class="study-center-photo">
+            <p></p>
+          </article>
+        </div>
+        <div class="col-4">
+          <article>
+            <header>
+              <h3>Universidad de Málaga</h3>
+            </header>
+            <img src="images/logo-uma.png" alt="Logo de la universidad de Málaga" class="study-center-photo">
+            <p></p>
+          </article>
+        </div>
+        <div class="col-4">
+          <article>
+            <header>
+              <h3>KeepCoding</h3>
+            </header>
+            <img src="images/keepCoding-logo.png" alt="Logo de KeepCoding" class="study-center-photo">
+            <p></p>
+          </article>
+        </div>
+      </div>
     </section>
-    <section id="experience">
-
+    <section id="experience" class="experience section-content ">
+      <h2 class="section-title">Experiencia</h2>
+      <div class="row">
+        <div class="col-4">
+          <img src="images/tetuan-valley-logo.png" alt="Logo de Tetuan Valley" class="image">
+        </div>
+        <div class="col-8"> Tetuan Valley</div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <img src="images/mooviest-logo.png" alt="Logo de la universidad de Málaga" class="image">
+        </div>
+        <div class="col-8">Mooviest</div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <img src="images/easy-stay-logo.png" alt="Logo de la universidad de Málaga" class="image">
+        </div>
+        <div class="col-8">Easy Stay</div>
+      </div>
     </section>
-    <section id="about-me">
-
+    <section id="hobbies" class="hobbies section-content-reverse">
+      <div class="row section-content container">
+        <h2 class="section-title">Hobbies</h2>
+        <div class="col-6">
+          <video id="video-batman" width="550" height="300" controls>
+            <source src="video/video.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="col-6">
+          <h2>Quien soy</h2>
+          <strong>Batman: </strong>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+        </div>
+      </div>
     </section>
-    <section id="contacto">
+    <section id="contact">
+      <h2 class="section-title"> Contacto</h2>
+      <div class="row">
+        <div class="col-8">
+          <h3 class="contact-title">Contactame</h3>
+          <form id="form-contact" class="form" name="contact-me" method="post" novalidate>
+            <div class="form-row">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="name" name="nombre" placeholder="Nombre" required>
+            </div>
 
+            <div class="form-row">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-Z0-9\.\+]+@[A-Za-Z0-9]+\.[A-Za-Z0-9\.]+" required>
+            </div>
+
+            <div class="form-row">
+              <p>¿Cómo me has conocido?</p>
+              <input type="radio" id="answer_1" name="know-me" value="friend" required> Un amigo<br/>
+              <input type="radio" id="answer_2" name="know-me" value="google" required> Googleando<br/>
+              <input type="radio" id="answer_3" name="know-me" value="other" required> Otro<br/>
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Número de teléfono</label>
+  						<input type="number" id="phone" name="phone" size="9" required>
+            </div>
+
+            <div class="form-row">
+              <textarea id="text-area" rows="4" cols="50" required></textarea>
+            </div>
+
+            <div class="form-row">
+              <button type="submit" id="enviar">Enviar</button>
+            </div>
+
+          </form>
+        </div>
+        <div class="col-4">
+          <form>
+            <h3>Añadir nuevo comentario</h3>
+            <input type="text" id="new-comment" placeholder="Deja un comentario.." required>
+            <br>
+            <br>
+            <button type="submit" id="send-new-comment">Enviar</button>
+          </form>
+          <h3>Comentarios</h3>
+  				<div class="loader"></div>
+          <div>
+            <ul id="comment-container"></ul>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>
+  <footer class="footer">
     José Antonio Palacios &#169; 2016
   </footer>
 </body>
+<script src="js/comment.js"></script>
+<script src="js/form.js"></script>
+<script src="js/menu.js"></script>
+
 </html>
